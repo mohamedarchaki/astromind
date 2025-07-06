@@ -6,6 +6,7 @@
 }
 :root{
     --main-color:#2196F3;
+    --main-dark: #0c75ca;
     --main-color-2:#333;
     --color-p:#777;
     --section-background-2: #f3f3f3;
@@ -87,25 +88,26 @@ ul{
     color: var(--text-color);
     box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
 }
+/* Start Home */
+.home{
+    min-height: 80vh;
+    background:url(../../img/background_home.jpg);
+    background-size: cover;
+    background-position: top;
+}
 /* start header */
-.header{
+.header {
     position: relative;
-    top: -20%;
+    background-color: #ffffff85;
     transition: .4s;
 }
 
 .header .container{
-    height: 75px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-}
-@media(max-width:767px){
-    .header .container{
-        
-    height: 50px;
-    }
 }
 .header img{
     height: 35px;
@@ -123,7 +125,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 72px;
+    height: 60px;
     padding: 0px 30px;
     color: var(--main-color-2);
     font-weight: bold;
@@ -138,15 +140,19 @@ ul{
         margin: 15px;
     }
     .header .container  .active{
-        background-color: var(--section-background-2);
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        transition: 0.5s;
         visibility: hidden;
-        z-index: 2;
-        top: 0px;
+        flex-direction: column;
+        background: var(--section-background);
+        position: absolute;
+        top: 0;
         left: -200%;
+        width: 100%;
+        padding: var(--padding-top-bottem);
+        flex: 1;
+        height: 100vh;
+        justify-content: flex-start;
+        z-index: 3;
+        transition: var(--main-transition);
     }
     .header .container ul.is-active {
         visibility: visible;
@@ -156,6 +162,7 @@ ul{
 }
 .header ul > li a:hover{
     color: var(--main-color);
+    background-color: var(--section-background-2);
 }
 .header #icon{
     font-size: 20px;
@@ -206,37 +213,33 @@ ul{
 }
 
 /* end header */
-/* Start Home */
-.home{
-    min-height: 60vh;
-    background:url(../../img/background_home.jpg);
-    background-size: cover;
-    margin: var(--margin-top-bottem);
-}
-.home .container {
+/* Start text Home */
+.text_home .container {
     height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.home .container h1{
+.text_home .container h1 {
     color: var(--bs-body-bg);
     font-weight: bold;
     text-shadow: var(--bs-box-shadow);
+    text-align: center;
 }
-.home .container p{
+.text_home .container p{
     max-width: 650px;
     text-align: center;
     margin: var(--margin-top-bottem);
     color: var(--bs-body-bg);
-    text-shadow: var(--bs-box-shadow);
+    text-shadow: 1px 0px 6px #333333;
     line-height: 4vh;
 }
-.home .container button{
+.text_home .container a{
+    display: block;
         padding: 10px 20px;
     font-size: 1em;
-     margin: 5px;
+     margin: 15px 5px;
     background-color: var(--section-background-2);
     color: var(--main-color);
     font-weight: bold;
@@ -245,28 +248,25 @@ ul{
     transition: var(--main-transition);
     letter-spacing: .7px;
 }
-.home .container button:hover{
+.text_home .container a:hover{
     color: var(--white);
     background-color: var(--main-color);
 }
 @media(max-width:767px){
-    .home{
-        background: url(../../img/background_home_mobile.jpg);
-        background-size: cover;
-        background-position: center;
+    .text_home{
         height: calc(80vh - 65px);
         margin-bottom: 0;
     }
-    .home .container{
+    .text_home .container{
         height: calc(80vh - 65px);
     }
-    .home .container .buttons{
+    .text_home .container .buttons{
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .home .container .buttons button{
-       padding: 5px 10px;
+    .text_home .container .buttons a{
+       padding: 10px 15px;
     font-size: 0.80em;
     margin: 5px 10px; 
     background-color: var(--bs-blue);
@@ -291,7 +291,6 @@ ul{
 }
 
 .feature-card {
-    background-color: var(--white);
     padding: 30px;
     box-shadow: var(--shadow);
     transition: var(--main-transition);
@@ -458,6 +457,125 @@ ul{
     font-size: 0.9rem;
     color: var(--text-light);
 }
+
+/* Pricing Section */
+#pricing {
+    background-color: var(--section-background);
+    padding: var(--padding-top-bottem);
+}
+
+.pricing-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 2px solid var(--main-color);
+}
+
+.pricing-header {
+    background: linear-gradient(135deg, var(--main-color), var(--main-dark));
+    color: var(--white);
+    padding: 30px;
+    text-align: center;
+}
+
+.pricing-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+.pricing-features  ul{
+    display: block;
+}
+.pricing-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.original-price {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    opacity: 0.7;
+    margin-right: 15px;
+}
+
+.current-price {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.discount-badge {
+    position: absolute;
+    top: -15px;
+    right: 20%;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.pricing-features {
+    padding: 30px;
+}
+
+.pricing-features ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-features ul li i {
+    color: var(--main-color);
+    margin-right: 10px;
+}
+
+.countdown-timer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+.countdown-timer p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+}
+
+.countdown-item {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.countdown-item span {
+    display: block;
+}
+
+#countdown span:first-child {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.countdown-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.pricing-cta {
+    padding: 30px;
+    text-align: center;
+}
+
+
 /* Contact Section */
 #contact {
     background-color: var(--white);

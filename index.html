@@ -19,17 +19,18 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
 <body>
+    
+    <div class="home" id="home">
     <!-- start header  -->
    <div class="header" id="head">
       <div class="container">
          <img src="img/archa9i.png" alt="ARCHA9I" id="logo1">
          <ul id="actoins" class="active">
-         <img src="img/archa9i.png" alt="ARCHA9I" id="logo">
-            <li><a href="" >Home</a></li>
-            <li><a href="project/index.html" >Project</a></li>
-            <li><a href="skills/index.html" >Skills</a></li>
-            <li><a href="contact/index.html" >contacte</a></li>
-            <li><a href="about/index.html" >About</a></li>
+            <li><a href="#home" >Home</a></li>
+            <li><a href="#features" >Features</a></li>
+            <li><a href="#testimonials" >Testimonials</a></li>
+            <li><a href="#Features" >Features</a></li>
+            <li><a href="#contact" >Contacte</a></li>
          </ul>
          <div class="span" id="menu">
             <span id="a"></span>
@@ -40,13 +41,14 @@
    </div>
    <!-- end header  -->
     <!-- start home -->
-    <div class="home">
+     <div class="text_home" id="home">
         <div class="container">
-            <h1>Bienvenue sur Astro Mind</h1>
-            <p>Explorez une collection unique de landing pages modernes et entièrement codées en HTML, CSS et JavaScript. Que vous soyez débutant ou développeur expérimenté, nos templates sont conçus pour vous aider à apprendre, créer et gagner du temps.</p>
+            <h1>Unleash Your Creativity with Astro Mind</h1>
+            <p>Supercharge your projects with our exclusive collection of ready-to-use landing page templates. Fast, modern, and fully coded get started today and save precious time and energy.</p>
             <div class="buttons">
-                <button>Télécharger les templates</button>
+                <a href="#features">Start Building Now</a>
             </div>
+        </div>
         </div>
     </div>
     <!-- End home -->
@@ -54,51 +56,30 @@
     <section id="features">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>Fonctionnalités Principales</h2>
-                <p>Tout ce dont vous avez besoin pour créer des landing pages performantes</p>
+                <h2>Why Choose Astro Mind?</h2>
+                <p>Unlock tools designed to boost conversions and impress your audience.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-icon">
                         <i class="fas fa-paint-brush"></i>
                     </div>
-                    <h3>Designs Modernes</h3>
-                    <p>Templates à fort taux de conversion conçus selon les dernières tendances du web design.</p>
+                    <h3>Modern, Stunning Designs</h3>
+                    <p>Captivate visitors with layouts built on the latest design trends.</p>
                 </div>
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>100% Responsive</h3>
-                    <p>Parfaitement adaptés à tous les appareils, du mobile au grand écran de bureau.</p>
+                    </div>  
+                    <h3>Fully Responsive</h3>
+                    <p>Your pages will shine on every device mobile, tablet, or desktop.</p>
                 </div>
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Code Organisé</h3>
-                    <p>Fichiers HTML, CSS et JS proprement structurés et commentés pour une modification facile.</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-icon">
-                        <i class="fas fa-magic"></i>
-                    </div>
-                    <h3>Sans Codage</h3>
-                    <p>Personnalisez facilement sans connaissances techniques grâce à notre structure intuitive.</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Compatibilité Navigateurs</h3>
-                    <p>Fonctionne parfaitement sur tous les navigateurs modernes pour une expérience utilisateur optimale.</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Support Technique</h3>
-                    <p>Assistance dédiée pour vous aider à tirer le meilleur parti de vos templates.</p>
+                    <h3>Clean & Editable Code</h3>
+                <p>Professionally structured code to make editing fast and hassle-free.</p>
                 </div>
             </div>
         </div>
@@ -108,15 +89,25 @@
     <section id="demo">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>Aperçu des Templates</h2>
-                <p>Découvrez la qualité et la diversité de nos designs</p>
+                <h2>Explore Our Templates</h2>
+                <p>Experience the premium quality and unique styles we offer</p>
             </div>
             <div class="demo-slider" data-aos="fade-up">
                 <div class="demo-slides">
                     <div class="demo-slide active">
                         <img src="img/template img/tamplet1.png" alt="Template 1">
                     </div>
+                    <div class="demo-slide active">
+                        <img src="img/template img/tamplet2.png" alt="Template 1">
+                    </div>
+                    <div class="demo-slide">
+                        <img src="img/template img/tamplet3.png" alt="Template 1">
+                    </div>
+                    <div class="demo-slide">
+                        <img src="img/template img/tamplet4.png" alt="Template 1">
+                    </div>
                 </div>
+                
                 <div class="slider-controls">
                     <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
                     <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
@@ -127,54 +118,139 @@
             </div>
         </div>
     </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials">
+    <!-- Pricing Section -->
+    <section id="pricing">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>Ce que disent nos clients</h2>
-                <p>Des professionnels qui utilisent nos templates au quotidien</p>
+                <h2>Grab the Deal Before It’s Gone!</h2>
+                <p>Launch your next big idea without breaking the bank.</p>
+            </div>
+            <div class="pricing-box" data-aos="zoom-in">
+                <div class="pricing-header">
+                    <h3>10 Premium Templates Pack</h3>
+                    <div class="pricing-value">
+                        <div class="original-price">47.5€</div>
+                        <div class="current-price">Only 19€</div>
+                        <div class="discount-badge">-60%</div>
+                    </div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> 10 Full HTML/CSS/JS Templates</li>
+                        <li><i class="fas fa-check"></i> Fully Responsive Layouts</li>
+                        <li><i class="fas fa-check"></i> Step-by-Step Documentation</li>
+                        <li><i class="fas fa-check"></i> Free Updates for 1 Year</li>
+                        <li><i class="fas fa-check"></i> 6 Months Premium Support</li>
+                        <li><i class="fas fa-check"></i> Commercial Use License</li>
+                    </ul>
+                </div>
+                <div class="countdown-timer">
+                    <p>Special offer ends in:</p>
+                    <div id="countdown">
+                        <div class="countdown-item">
+                            <span id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pricing-cta">
+                    <a href="https://gumroad.com/checkout?_gl=1*t1gmid*_ga*ODk5MDA0MzAxLjE3NTE3OTE2NTI.*_ga_6LJN6D94N6*czE3NTE3OTE2NTEkbzEkZzEkdDE3NTE3OTE3MzEkajQ2JGwwJGgw" class="btn btn-primary btn-large" target="_blank">Buy Now & Save 60%</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section id="testimonials" >
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Clients Love It</h2>
+                <p>Join hundreds of satisfied creators who took their websites to the next level.</p>
             </div>
             <div class="testimonials-slider" data-aos="fade-up">
                 <div class="testimonial-slides">
                     <div class="testimonial-slide active">
                         <div class="testimonial-content">
                             <div class="testimonial-image">
-                                <img src="img/client1.jpg" alt="Client 1">
+                                <img src="img/client1.jpg" alt="Amanda Taylor">
                             </div>
                             <div class="testimonial-text">
-                                <p>"Ces templates ont révolutionné notre processus de création de landing pages. Nous avons économisé des semaines de développement et augmenté nos taux de conversion de 35%."</p>
+                                <p>"AstroMind helped me launch a sales campaign in just one day. The code is super clean and the pages look amazing on all devices. Perfect for small business owners like me!"</p>
                                 <div class="testimonial-author">
-                                    <h4>Sophie Martin</h4>
-                                    <p>Directrice Marketing, TechSolutions</p>
+                                    <h4>Amanda Taylor</h4>
+                                    <p>Startup Founder</p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <div class="testimonial-slide">
                         <div class="testimonial-content">
                             <div class="testimonial-image">
-                                <img src="img/client2.jpg" alt="Client 2">
+                                <img src="img/client2.jpg" alt="James Walker">
                             </div>
                             <div class="testimonial-text">
-                                <p>"La qualité du code est impressionnante. Même en tant que développeur expérimenté, j'apprécie l'organisation et la clarté qui me permettent de personnaliser rapidement chaque template."</p>
+                                <p>"I’ve worked with tons of templates before, but AstroMind is by far the most polished. The structure is easy to customize and everything loads fast. Totally worth it."</p>
                                 <div class="testimonial-author">
-                                    <h4>Thomas Dubois</h4>
-                                    <p>Développeur Frontend, WebAgency</p>
+                                    <h4>James Walker</h4>
+                                    <p>Freelance Developer</p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     <div class="testimonial-slide">
                         <div class="testimonial-content">
                             <div class="testimonial-image">
-                                <img src="img/client1.jpg" alt="Client 3">
+                                <img src="img/client5.jpg" alt="Emily Johnson">
                             </div>
                             <div class="testimonial-text">
-                                <p>"En tant que startup avec un budget limité, ces templates nous ont permis de lancer rapidement plusieurs campagnes marketing avec un design professionnel. Un investissement qui a largement payé."</p>
+                                <p>"As a designer with limited coding skills, I was able to edit AstroMind pages quickly and make them my own. Loved the layout and how responsive everything is."</p>
                                 <div class="testimonial-author">
-                                    <h4>Émilie Leclerc</h4>
-                                    <p>Fondatrice, GreenStartup</p>
+                                    <h4>Emily Johnson</h4>
+                                    <p>UX Designer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-image">
+                                <img src="img/client3.jpg" alt="Daniel Brooks">
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"Great value for the price. I used three of the AstroMind templates for different clients and each one converted really well. Highly recommend this pack for freelancers."</p>
+                                <div class="testimonial-author">
+                                    <h4>Daniel Brooks</h4>
+                                    <p>Agency Owner</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-image">
+                                <img src="img/client4.jpg" alt="Michael Carter">
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"The documentation is clear, and AstroMind saved me hours of development. I was up and running in no time. Clean, modern, and efficient."</p>
+                                <div class="testimonial-author">
+                                    <h4>Michael Carter</h4>
+                                    <p>Web Consultant</p>
                                 </div>
                             </div>
                         </div>
@@ -192,90 +268,92 @@
     <section id="contact">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>Contactez-nous</h2>
-                <p>Nous sommes là pour répondre à toutes vos questions</p>
+                <h2>Got Questions?</h2>
+                <p>We're here to support you on your journey. Let's connect!</p>
             </div>
             <div class="contact-container" data-aos="fade-up">
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Nom</label>
+                            <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email">Your Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
+                            <label for="message">Your Message</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Envoyer Message</button>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
                 <div class="contact-info">
-                    <div class="contact-method">
-                        <i class="fas fa-envelope"></i>
-                        <h3>Email</h3>
-                        <p><a href="mailto:contact@templates.com">contact@templates.com</a></p>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fab fa-whatsapp"></i>
-                        <h3>WhatsApp</h3>
-                        <p><a href="https://wa.me/33123456789">+33 1 23 45 67 89</a></p>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fas fa-clock"></i>
-                        <h3>Heures de Support</h3>
-                        <p>Lun-Ven: 9h-18h (CET)</p>
-                    </div>
-                </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p><a href="mailto:astromind02@gmail.com" target="_blank">astromind02@gmail.com</a></p>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <h3>WhatsApp</h3>
+                            <p><a href="https://wa.me/212689431780" target="_blank">+212 6 89 43 17 80</a></p>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-clock"></i>
+                            <h3>Support Hours</h3>
+                            <p>Mon–Fri: 9 AM – 6 PM (CET)</p>
+                        </div>
+                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="img/archaki_light.png" alt="Logo">
-                    <p>Solutions de templates professionnels pour booster votre présence en ligne.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Liens Rapides</h3>
-                    <ul>
-                        <li><a href="#hero">Accueil</a></li>
-                        <li><a href="#features">Fonctionnalités</a></li>
-                        <li><a href="#demo">Démos</a></li>
-                        <li><a href="#pricing">Tarifs</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-legal">
-                    <h3>Légal</h3>
-                    <ul>
-                        <li><a href="#">Conditions d'utilisation</a></li>
-                        <li><a href="#">Politique de confidentialité</a></li>
-                        <li><a href="#">Licence</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h3>Suivez-nous</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/archaki_light.png" alt="Logo">
+                <p>Professional template solutions to boost your online presence.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Templates Pro. Tous droits réservés.</p>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#demo">Demos</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-legal">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">License</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Astro Mind Templates. Empowering your digital presence.</p>
+        </div>
+    </div>
+</footer>
+
 
     <!-- Back to Top Button -->
     <a href="#" id="back-to-top" title="Retour en haut"><i class="fas fa-arrow-up"></i></a>

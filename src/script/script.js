@@ -134,3 +134,51 @@ initTestimonialSlider()
             behavior: 'smooth'
         });
     });
+
+
+    // Fonction pour initialiser le compteur à rebours
+function initCountdown() {
+    // Date cible (7 jours à partir de maintenant)
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 3);
+    
+    // Éléments du compteur
+    const daysElement = document.getElementById('days');
+    const hoursElement = document.getElementById('hours');
+    const minutesElement = document.getElementById('minutes');
+    const secondsElement = document.getElementById('seconds');
+    
+    // Fonction de mise à jour du compteur
+    function updateCountdown() {
+        const currentDate = new Date();
+        const difference = targetDate - currentDate;
+        
+        // Calcul des jours, heures, minutes et secondes
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        
+        // Mise à jour des éléments HTML
+        if (daysElement) daysElement.textContent = days.toString().padStart(2, '0');
+        if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0');
+        if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
+        if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
+        
+        // Si le compteur est terminé
+        if (difference < 0) {
+            clearInterval(countdownInterval);
+            if (daysElement) daysElement.textContent = '00';
+            if (hoursElement) hoursElement.textContent = '00';
+            if (minutesElement) minutesElement.textContent = '00';
+            if (secondsElement) secondsElement.textContent = '00';
+        }
+    }
+    
+    // Mise à jour initiale
+    updateCountdown();
+    
+    // Mise à jour toutes les secondes
+    const countdownInterval = setInterval(updateCountdown, 1000);
+}
+initCountdown()

@@ -66,7 +66,57 @@ function initDemoSlider() {
     }, 5000);
 }
 
+
+// Fonction pour initialiser le slider de démos mobile
+function initDemoSliderMobil() {
+    const demoSlides = document.querySelectorAll('.demo-slide-mobil');
+    const prevButton = document.querySelector('.prev-slide-mobil');
+    const nextButton = document.querySelector('.next-slide-mobil');
+    let currentSlide = 0;
+    // Fonction pour afficher un slide spécifique
+    function showSlide(index) {
+        // Gestion des limites
+        if (index < 0) index = demoSlides.length - 1;
+        if (index >= demoSlides.length) index = 0;
+        
+        // Mise à jour de l'index courant
+        currentSlide = index;
+        
+        // Mise à jour des classes active
+        demoSlides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === currentSlide) {
+                slide.classList.add('active');
+            }
+        });
+        
+        // Mise à jour de la position du slider
+        const slidesContainer = document.querySelector('.demo-slides-mobil');
+        const slideWidth = demoSlides[0].offsetWidth;
+        slidesContainer.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    }
+    
+    // Initialisation du premier slide
+    showSlide(currentSlide);
+    
+    // Gestion des boutons de navigation
+    if (prevButton && nextButton) {
+        prevButton.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+        });
+        
+        nextButton.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+    }
+    
+    // Défilement automatique
+    setInterval(() => {
+        showSlide(currentSlide + 1);
+    }, 5000);
+}
 initDemoSlider()
+initDemoSliderMobil() 
 
 // Fonction pour initialiser le slider de témoignages
 function initTestimonialSlider() {
